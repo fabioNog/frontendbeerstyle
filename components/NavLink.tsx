@@ -25,7 +25,7 @@ export default NavLink;
 const link = cva(['w-44 max-w-full my-2 p-2 rounded text-center text-lg font-medium transition-colors'], {
   variants: {
     active: {
-      true: 'bg-[#0b9219] text-white',
+      true: 'bg-[#F28E1C] text-white',
     },
   },
   defaultVariants: {

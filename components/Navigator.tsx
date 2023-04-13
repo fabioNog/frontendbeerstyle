@@ -42,7 +42,7 @@ const Navigator: React.FC<Props> = ({ children }) => {
 
 export default Navigator;
 
-const sidebar = cva(['bg-[#ccc] dark:bg-[#111] absolute top-0 w-3/4  h-full transition-all duration-300'], {
+const sidebar = cva(['bg-[#FDFFFC] dark:bg-[#111] absolute top-0 w-3/4  h-full transition-all duration-300'], {
   variants: {
     active: {
       true: ['left-0'],
