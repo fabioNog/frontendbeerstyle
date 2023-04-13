@@ -1,7 +1,7 @@
 import axios from "axios";
 import { TemperatureType, BeerType } from "interfaces";
 
-const BASE_URL = "https://beearstyledeploy.onrender.com";
+const BASE_URL = process.env.URL_LOCAL || "https://beearstyledeploy.onrender.com";
 
 export const beerApi = {
   
