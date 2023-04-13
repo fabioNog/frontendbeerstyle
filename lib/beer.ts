@@ -1,11 +1,9 @@
 import axios, { AxiosResponse } from "axios";
 import { TemperatureType, BeerType } from "interfaces";
 
-const BASE_URL = process.env.URL_LOCAL || "https://beearstyledeploy.onrender.com";
+// const BASE_URL = process.env.URL_LOCAL||"https://beearstyledeploy.onrender.com";
+const BASE_URL = 'http://localhost:3001';
 
-interface BeerApiResponse<T> {
-  data: T;
-}
 
 interface BeerApiError {
   message: string;
