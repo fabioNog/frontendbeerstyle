@@ -48,17 +48,17 @@ const Home: React.FC<InputProps> = () => {
       toast.success('Cerveja criada com sucesso!', {
         autoClose: 3000 // toast fica visível por 5 segundos
       });
-      // setTimeout(() => {
-      //   window.location.reload();
-      // }, 3000)
+      setTimeout(() => {
+        window.location.reload();
+      }, 3000)
     } catch (error) {
       console.log(error);
       toast.error('Erro ao criar cerveja', {
         autoClose: 3000 // toast fica visível por 5 segundos
       });
-      // setTimeout(() => {
-      //   window.location.reload();
-      // }, 3000)
+      setTimeout(() => {
+        window.location.reload();
+      }, 3000)
     }
   }, [stylebeer, minTemperature, maxTemperature]);
 
