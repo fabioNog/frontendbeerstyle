@@ -1,5 +1,4 @@
 "use client";
-import { GetServerSideProps } from 'next';
 import React, { useCallback, useState } from "react";
 import AddTodoButton from "../../components/AddTodoButton";
 import Input from "../../components/Input";
@@ -10,7 +9,6 @@ import "react-toastify/dist/ReactToastify.css";
 
 import "./beercard.css"
 
-import AlbumInfo from "./albuminfo";
 
 
 
@@ -83,15 +81,6 @@ const Ideal = ({ album,artists }: Props) => {
   );
 };
 
-// export const getServerSideProps: GetServerSideProps = async () => {
-//   const response = await fetch('https://api.spotify.com/v1/albums/7I0tjwFtxUwBC1vgyeMAax');
-//   const album = await response.json();
 
-//   return {
-//     props: {
-//       album,
-//     },
-//   };
-// };
 
 export default Ideal;
