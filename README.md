@@ -1,3 +1,7 @@
+
+## Iniciando 
+Para você executar este Projeto, você nescessitará ter o [Node.js]([https://nextjs.org/](https://nodejs.org/en))
+
 Este é um projeto [Next.js](https://nextjs.org/) execute o comando de instalação [`yarn install`].
 
 ## Começando
