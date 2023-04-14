@@ -1,8 +1,8 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Este é um projeto [Next.js](https://nextjs.org/) execute o comando de instalação [`yarn install`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+## Começando
 
-First, run the development server:
+Para começar, execute o servidor de desenvolvimento:
 
 ```bash
 npm run dev
