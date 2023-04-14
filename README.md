@@ -1,12 +1,12 @@
 
 ## Iniciando 
-Para você executar este Projeto, você nescessitará ter o [Node.js]([https://nextjs.org/](https://nodejs.org/en))
+Para você executar este Projeto, você nescessitará ter o [Node.js](https://nodejs.org/en) de prefêrencia na versão Latest 18.16.0
 
-Este é um projeto [Next.js](https://nextjs.org/) execute o comando de instalação [`yarn install`].
+Este é um projeto [Next.js](https://nextjs.org/) execute o comando de instalação [`yarn install` ou `npm install` ].
 
 ## Começando
 
-Para começar, execute o servidor de desenvolvimento:
+Para começar, após instalado corretamente, execute o servidor de desenvolvimento:
 
 ```bash
 npm run dev
