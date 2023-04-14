@@ -1,4 +1,4 @@
-Este é um projeto [Next.js](https://nextjs.org/) execute o comando de instalação [`yarn install`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Este é um projeto [Next.js](https://nextjs.org/) execute o comando de instalação [`yarn install`].
 
 ## Começando
 
