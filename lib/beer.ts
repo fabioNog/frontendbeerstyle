@@ -1,7 +1,8 @@
 import axios, { AxiosResponse } from "axios";
 import { TemperatureType, BeerType } from "interfaces";
 
-const BASE_URL = process.env.URL_LOCAL || "https://beearstyledeploy.onrender.com";
+// const BASE_URL = process.env.URL_LOCAL || "https://beearstyledeploy.onrender.com";
+const BASE_URL = "http://localhost:3001";
 
 interface BeerApiResponse<T> {
   data: T;
@@ -21,10 +22,10 @@ export const beerApi = {
     }
   },
   getBeer: async (temperature: TemperatureType): Promise<BeerType> => {
+    console.log(BASE_URL,temperature.temperature);
     try {
-      const response: AxiosResponse<BeerType> = await axios.patch(
-        `${BASE_URL}/beerstyle_temperature`,
-        temperature
+      const response: AxiosResponse<BeerType> = await axios.get(
+        `${BASE_URL}/beerstyle_temperature?temperature=${temperature.temperature}`
       );
       console.log(response.data)
       return response.data;

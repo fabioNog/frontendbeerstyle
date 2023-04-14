@@ -1,15 +1,20 @@
 "use client";
+import { GetServerSideProps } from 'next';
 import React, { useCallback, useState } from "react";
 import AddTodoButton from "../../components/AddTodoButton";
 import Input from "../../components/Input";
 import { beerApi } from "../../lib/beer";
 import { ToastContainer, toast } from "react-toastify";
-import { TemperatureType, BeerType } from "interfaces";
+import { TemperatureType, BeerType,Props } from "interfaces";
 import "react-toastify/dist/ReactToastify.css";
 
 import "./beercard.css"
 
-const Ideal: React.FC = () => {
+import AlbumInfo from "./albuminfo";
+
+
+
+const Ideal = ({ album,artists }: Props) => {
   const [temperature, setTemperature] = useState(0);
   const [beer, setBeer] = useState<BeerType | null>(null);
 
@@ -24,8 +29,9 @@ const Ideal: React.FC = () => {
     async (event: React.FormEvent<HTMLFormElement>) => {
       event.preventDefault();
       try {
+        console.log(`Estou enviando a ${temperature}`)
         const response = await beerApi.getBeer({
-          temperature: temperature,
+          temperature,
         });
         console.log(response);
         setBeer(response);
@@ -60,16 +66,32 @@ const Ideal: React.FC = () => {
           />
         </form>
         {beer && (
+          <>
           <div className="beer-card items-center justify-center flex-1 flex flex-col space-y-4">
             <h2>{beer.stylebeer}</h2>
             <p>{beer.maxtemperature}</p>
             <p>{beer.mintemperature}</p>
+            <p>{beer.artists[0].name}</p>
+            <p>{beer.mintemperature}</p>
           </div>
+          {/* <AlbumInfo album={album} /> */}
+          </>
         )}
       </div>
       <ToastContainer />
     </>
   );
 };
+
+// export const getServerSideProps: GetServerSideProps = async () => {
+//   const response = await fetch('https://api.spotify.com/v1/albums/7I0tjwFtxUwBC1vgyeMAax');
+//   const album = await response.json();
+
+//   return {
+//     props: {
+//       album,
+//     },
+//   };
+// };
 
 export default Ideal;
